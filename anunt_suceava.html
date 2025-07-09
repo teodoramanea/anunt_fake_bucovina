@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunț Cabana Bucovina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: hidden;
+            gap: 10px;
+            scroll-behavior: smooth;
+        }
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 1;
+        }
+        .arrow.left {
+            left: 0;
+        }
+        .arrow.right {
+            right: 0;
+        }
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+        }
+        .contact {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cabana Rustică din Bucovina</h1>
+        <div class="gallery-wrapper">
+            <button class="arrow left" onclick="scrollGallery(-300)">&#10094;</button>
+            <button class="arrow right" onclick="scrollGallery(300)">&#10095;</button>
+            <div class="gallery" id="gallery">
+                <img src="poza_4.jpeg" alt="Interior cabană - bucătărie și zonă de luat masa">
+                <img src="poza_2.jpeg" alt="Exterior cabană">
+                <img src="poza_3.jpeg" alt="Vedere panoramică">
+                <img src="poza_5.jpeg" alt="Vedere panoramică">
+                <img src="poza_6.jpeg" alt="Baie">
+                <img src="poza_7.jpeg" alt="Vedere panoramică">
+                <img src="poza_8.jpeg" alt="Vedere panoramică">
+            </div>
+        </div>
+        <p>
+            Descoperă liniștea și frumusețea zonei Bucovinei într-o cabană rustică ce îmbină perfect farmecul tradițional cu confortul modern. Această cabană dispune de o bucătărie spațioasă cu tavan din lemn, masă de dining, scaune confortabile și un decor cozy cu accente rustice, ideal pentru o masă în familie sau cu prietenii. Ferestrele mari oferă o priveliște panoramică asupra peisajelor naturale, iar scara interioară duce către un spațiu de relaxare suplimentar. Perfectă pentru o retragere liniștită, cabana este echipată cu toate facilitățile necesare: frigider, cuptor, chiuvetă și iluminat cald. Bucură-te de o atmosferă primitoare într-un colț al Bucovinei!
+        </p>
+        <div class="contact">
+            <p>Adresă: Strada Florilor 12, Sat Vatra Moldoviței, 727595</p>
+            <p>Email: contact@cabanabucovina.ro</p>
+            <p>Telefon: +40 745 123 456</p>
+        </div>
+    </div>
+
+    <script>
+        function scrollGallery(scrollOffset) {
+            const gallery = document.getElementById('gallery');
+            gallery.scrollLeft += scrollOffset;
+        }
+    </script>
+</body>
+</html>
